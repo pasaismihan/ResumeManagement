@@ -15,8 +15,20 @@ namespace backend.Core.Context
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<Job>().HasOne(job => job.Company).WithMany(company => company.Jobs).HasForeignKey(job => job.CompanyId);
-            modelBuilder.Entity<Candidate>().HasOne(candidate => candidate.Job).WithMany(job => job.Candidates).HasForeignKey(candi => candi.JobId);
+            modelBuilder.Entity<Job>()
+                .HasOne(job => job.Company)
+                .WithMany(company => company.Jobs)
+                .HasForeignKey(job => job.CompanyId);
+            modelBuilder.Entity<Candidate>()
+                .HasOne(candidate => candidate.Job)
+                .WithMany(job => job.Candidates)
+                .HasForeignKey(candi => candi.JobId);
+            modelBuilder.Entity<Company>()
+                .Property(company => company.Size)
+                .HasConversion<string>();
+            modelBuilder.Entity<Job>()
+          .Property(job => job.Level)
+          .HasConversion<string>();
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

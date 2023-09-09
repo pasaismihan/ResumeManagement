@@ -1,17 +1,22 @@
-﻿using backend.Core.Context;
+﻿using System.Text.Json.Serialization;
+using backend.Core.AutoMapperConfig;
+using backend.Core.Context;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// DB Configuration
-//builder.Services.AddDbContext<ApplicationDbContext>(options =>
-//{
-//    options.UseSqlServer(builder.Configuration.GetConnectionString("local"));
-//});
+// AutoMapper Configuration
+builder.Services.AddAutoMapper(typeof(AutoMapperConfigProfile));
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.
+    AddControllers()
+    // This is for convert enum to string or string to enum on client side 
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+    });
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -33,3 +38,8 @@ app.MapControllers();
 
 app.Run();
 
+// DB Configuration
+//builder.Services.AddDbContext<ApplicationDbContext>(options =>
+//{
+//    options.UseSqlServer(builder.Configuration.GetConnectionString("local"));
+//});
