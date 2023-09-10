@@ -5,10 +5,16 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
 // AutoMapper Configuration
 builder.Services.AddAutoMapper(typeof(AutoMapperConfigProfile));
 
 // Add services to the container.
+// DB Configuration(to get connection string in app.settings.json)
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("local"));
+});
 
 builder.Services.
     AddControllers()
@@ -38,8 +44,4 @@ app.MapControllers();
 
 app.Run();
 
-// DB Configuration
-//builder.Services.AddDbContext<ApplicationDbContext>(options =>
-//{
-//    options.UseSqlServer(builder.Configuration.GetConnectionString("local"));
-//});
+
