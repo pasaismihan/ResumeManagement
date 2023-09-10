@@ -1,39 +1,61 @@
 ﻿<Properties StartupConfiguration="{26C09CFA-609A-4692-B97D-C259E2A8441E}|https">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.backend PreferredExecutionTarget="/Applications/Safari.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.backend PreferredExecutionTarget="/Applications/Safari.app" FirstBuild="True" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="appsettings.json">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/CandidateController.cs">
     <Files>
-      <File FileName="Core/Entities/BaseEntity.cs" />
-      <File FileName="Core/Entities/Company.cs" />
-      <File FileName="Core/Entities/Job.cs" />
-      <File FileName="Core/Entities/Candidate.cs" />
-      <File FileName="Core/Enums/CompanySize.cs" />
-      <File FileName="Core/Enums/JobLevel.cs" />
-      <File FileName="Core/Context/ApplicationDbContext.cs" Line="23" Column="148" />
-      <File FileName="appsettings.json" Line="12" Column="1" />
-      <File FileName="Program.cs" Line="9" Column="80" />
+      <File FileName="Core/Entities/BaseEntity.cs" Line="9" Column="1" />
+      <File FileName="Core/Entities/Company.cs" Line="16" Column="1" />
+      <File FileName="Core/Entities/Job.cs" Line="20" Column="1" />
+      <File FileName="Core/Entities/Candidate.cs" Line="6" Column="1" />
+      <File FileName="Core/Enums/CompanySize.cs" Line="1" Column="1" />
+      <File FileName="Core/Enums/JobLevel.cs" Line="1" Column="1" />
+      <File FileName="Core/Context/ApplicationDbContext.cs" Line="10" Column="10" />
+      <File FileName="appsettings.json" Line="13" Column="1" />
+      <File FileName="Program.cs" Line="43" Column="22" />
+      <File FileName="Controllers/CompanyController.cs" Line="32" Column="88" />
+      <File FileName="Core/Dtos/Company/CompanyCreateDto.cs" Line="9" Column="46" />
+      <File FileName="Core/AutoMapperConfig/AutoMapperConfigProfile.cs" Line="25" Column="78" />
+      <File FileName="Migrations/20230908005452_initial-migration.cs" Line="58" Column="18" />
+      <File FileName="Core/Dtos/Company/CompanyGetDto.cs" Line="10" Column="46" />
+      <File FileName="Core/Dtos/Job/JobCreateDto.cs" Line="10" Column="44" />
+      <File FileName="Core/Dtos/Job/JobGetDto.cs" Line="10" Column="42" />
+      <File FileName="Controllers/JobController.cs" Line="38" Column="1" />
+      <File FileName="Core/Dtos/Candidate/CandidateCreateDto.cs" Line="11" Column="40" />
+      <File FileName="Core/Dtos/Candidate/CandidateGetDto.cs" Line="14" Column="9" />
+      <File FileName="Controllers/CandidateController.cs" Line="68" Column="18" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="backend" expanded="True">
             <Node name="backend" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="CandidateController.cs" selected="True" />
+              </Node>
               <Node name="Core" expanded="True">
+                <Node name="AutoMapperConfig" expanded="True" />
                 <Node name="Context" expanded="True" />
+                <Node name="Dtos" expanded="True">
+                  <Node name="Candidate" expanded="True" />
+                  <Node name="Company" expanded="True" />
+                  <Node name="Job" expanded="True" />
+                </Node>
                 <Node name="Entities" expanded="True" />
                 <Node name="Enums" expanded="True" />
               </Node>
+              <Node name="Documents" expanded="True">
+                <Node name="Pdfs" expanded="True" />
+              </Node>
               <Node name="Migrations" expanded="True" />
-              <Node name="appsettings.json" selected="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
