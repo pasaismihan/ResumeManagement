@@ -17,6 +17,7 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.10" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,6 +28,11 @@
     <None Remove="Core\Enums\" />
     <None Remove="Core\Context\" />
     <None Remove="Core\AutoMapperConfig\" />
+    <None Remove="Core\Dtos\Candidate\" />
+    <None Remove="Core\Dtos\Company\" />
+    <None Remove="Core\Dtos\Job\" />
+    <None Remove="Documents\" />
+    <None Remove="Documents\Pdfs\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -36,5 +42,10 @@
     <Folder Include="Core\Enums\" />
     <Folder Include="Core\Context\" />
     <Folder Include="Core\AutoMapperConfig\" />
+    <Folder Include="Core\Dtos\Candidate\" />
+    <Folder Include="Core\Dtos\Company\" />
+    <Folder Include="Core\Dtos\Job\" />
+    <Folder Include="Documents\" />
+    <Folder Include="Documents\Pdfs\" />
   </ItemGroup>
 </Project>

@@ -1,4 +1,39 @@
 ﻿<Properties StartupConfiguration="{26C09CFA-609A-4692-B97D-C259E2A8441E}|https">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.backend FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.backend PreferredExecutionTarget="/Applications/Safari.app" FirstBuild="True" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="appsettings.json">
+    <Files>
+      <File FileName="Core/Entities/BaseEntity.cs" />
+      <File FileName="Core/Entities/Company.cs" />
+      <File FileName="Core/Entities/Job.cs" />
+      <File FileName="Core/Entities/Candidate.cs" />
+      <File FileName="Core/Enums/CompanySize.cs" />
+      <File FileName="Core/Enums/JobLevel.cs" />
+      <File FileName="Core/Context/ApplicationDbContext.cs" Line="23" Column="148" />
+      <File FileName="appsettings.json" Line="12" Column="1" />
+      <File FileName="Program.cs" Line="9" Column="80" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="backend" expanded="True">
+            <Node name="backend" expanded="True">
+              <Node name="Core" expanded="True">
+                <Node name="Context" expanded="True" />
+                <Node name="Entities" expanded="True" />
+                <Node name="Enums" expanded="True" />
+              </Node>
+              <Node name="Migrations" expanded="True" />
+              <Node name="appsettings.json" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
 </Properties>
