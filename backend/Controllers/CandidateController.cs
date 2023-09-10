@@ -66,7 +66,7 @@ namespace backend.Controllers
 
         // Read (Download Pdf File)
         [HttpGet]
-        [Route("download/{id}")]
+        [Route("download/{url}")]
         public IActionResult DownloadPdfFile(string url)
         {
             var filePath = Path.Combine(Directory.GetCurrentDirectory(), "Documents", "Pdfs", url);
