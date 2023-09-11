@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./companies.scss";
 import { ICreateCompanyDto } from "../../types/global.typing";
 import TextField from "@mui/material/TextField/TextField";
 import FormControl from "@mui/material/FormControl/FormControl";
@@ -7,6 +8,7 @@ import Select from "@mui/material/Select/Select";
 import MenuItem from "@mui/material/MenuItem/MenuItem";
 import Button from "@mui/material/Button/Button";
 import { useNavigate } from "react-router-dom";
+import httpModule from "../../helpers/http.module";
 const AddCompany = () => {
   const [company, setCompany] = useState<ICreateCompanyDto>({
     name: "",
@@ -14,7 +16,16 @@ const AddCompany = () => {
   });
   const redirect = useNavigate();
 
-  const handleClickSaveBtn = () => {};
+  const handleClickSaveBtn = () => {
+    if (company.name === "" || company.size === "") {
+      alert("Fill all fields");
+      return;
+    }
+    httpModule
+      .post("/Company/Create", company)
+      .then((response) => redirect("/companies"))
+      .catch((error) => console.log(error));
+  };
   const handleClickBackBtn = () => {
     redirect("/companies");
   };
